@@ -1,0 +1,10 @@
+.navbar{
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h3{
+    color:blueviolet;
+}

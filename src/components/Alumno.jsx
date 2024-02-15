@@ -1,8 +1,9 @@
-const Alumno = () => {
+const Alumno = ({alumno}) => {
+    const {nombre, nota} = alumno
     return (
         <div>
-            <h3>Alumno: Ariel</h3>
-            <h4>Nota: 9</h4>
+            <h3>Alumno: {nombre}</h3>
+            <h4>Nota: {nota}</h4>
         </div>
     )
 }

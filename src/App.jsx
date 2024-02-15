@@ -1,24 +1,41 @@
 import './App.css'
 import Alumno from './components/Alumno.jsx'
+import Navbar from './components/Navbar.jsx'
+import Shop from './components/Shop.jsx'
 
 function App() {
-  console.log('Hola')
+
+  const alumnos = [
+    {
+      nombre:'Mateo', nota:10
+    },
+    {
+      nombre:'Mateo', nota:10
+    },
+    {
+      nombre:'Luis', nota:8
+    },
+    {
+      nombre:'Ignacio', nota:9
+    },
+    {
+      nombre: 'Agostina', nota: 10
+    },
+  ]
+
   return (
     <>
-      <h1>Mi segunda clase de FEIII</h1>
-      <ul>
-        <li>Alumno 1</li>
-        <li>Alumno 2</li>
-        <li>Alumno 3</li>
-        <li>Alumno 4</li>
-        <li>Alumno 5</li>
-      </ul>
-      <input type="text" />
-      <button>Hola</button>
-      <img src="" alt="" />
-      <Alumno/>
-      <Alumno/>
-      <Alumno/>
+      <Navbar />
+      <Shop/>
+
+      {/* <Alumno nombre='Mateo' nota={10}/>
+      <Alumno nombre='Luis' nota={8}/>
+      <Alumno nombre='Ignacio' nota={9}/> */}
+
+      {/* {alumnos.map((item, indice) => <Alumno key={indice} alumno={item} />)} */}
+
+
+
     </>
   )
 }
