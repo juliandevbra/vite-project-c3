@@ -1,16 +1,22 @@
 import CardStyles from '../Styles/Card.module.css'
+import Counter from './Counter'
 
 const inlineExample = {
-    backgroundColor: 'crimson'
+    backgroundColor: 'white'
 }
 
-const Card = ({pizza}) => {
-    console.log(CardStyles)
+const Card = ({ pizza, setCart }) => {
+
+  const addCart = () => {
+    setCart((prevCart) => [...prevCart, pizza])
+  }
   return (
     <div className={CardStyles.cardContainer} style={inlineExample}>
         <img src={pizza.img} alt="" className={CardStyles.cardImg}/>
         <h3>{pizza.tipo}</h3>
-        <h4>{pizza.precio}</h4>
+        <h4 style={{color: 'black'}}>{pizza.precio}</h4>
+        <Counter/>
+        <button onClick={addCart}>Añadir al carrito</button>
     </div>
   )
 }
