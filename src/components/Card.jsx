@@ -2,7 +2,7 @@ import CardStyles from '../Styles/Card.module.css'
 import Counter from './Counter'
 
 const inlineExample = {
-    backgroundColor: 'white'
+    // backgroundColor: 'white'
 }
 
 const Card = ({ pizza, setCart }) => {
@@ -16,7 +16,7 @@ const Card = ({ pizza, setCart }) => {
         <h3>{pizza.tipo}</h3>
         <h4 style={{color: 'black'}}>{pizza.precio}</h4>
         <Counter/>
-        <button onClick={addCart}>Añadir al carrito</button>
+        <button className={CardStyles.cartBtn} onClick={addCart}>Añadir al carrito</button>
     </div>
   )
 }

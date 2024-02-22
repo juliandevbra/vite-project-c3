@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CardStyles from '../Styles/Card.module.css'
 
 const Counter = () => {
 
@@ -17,11 +18,11 @@ const Counter = () => {
     }
     
   return (
-    <>
+    <div className={CardStyles.btnGroup}>
         <button onClick={restar}>-</button>
         <h3>{counter}</h3>
         <button onClick={sumar}>+</button>
-    </>
+    </div>
 
   )
 }
